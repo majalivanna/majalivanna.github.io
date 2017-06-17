@@ -1,11 +1,87 @@
 body {
-	background-color: hotpink;
+	background-color: white;
+	margin: 0px;
+	font-family: sans-serif;
+	text-align: center;
 }
 
 header {
-	background-image: url("https://images.pexels.com/photos/370/lights-night-dark-abstract.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
-}
+	margin: 0px auto;
+	background-image: url("http://tjejerkodar.se/image/lila_pattern.png");
+	color: white;
+	}
 
 ul {
 	list-style: none;
+}
+
+.navigation {
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	max-width: 700px;
+	margin: 0px auto;
+	text-transform: uppercase;
+}
+
+.intro {
+	margin: auto;
+	display: block;
+	padding-bottom: 20px;
+}
+
+.intro-fancy {
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.courses {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 50px 0 50px;
+}
+
+.courses-photo {
+	height: 340px;
+	width: 530px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.courses-photo h2 {
+	background-color: white;
+	padding: 10px 7px 10px 7px;
+}
+
+.courses-photo.berlin {
+	background-image: url('http://tjejerkodar.se/image/aktuell-berlin.png');
+	background-size: cover;
+}
+
+.courses-photo.barcelona {
+	background-image: url('http://tjejerkodar.se/image/aktuell-barcelona2.png');
+}
+
+.courses-description {
+	height: 340px;
+	width: 340px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.courses-description.berlin {
+	background-image: url('http://tjejerkodar.se/image/ljuslila_pattern.png');
+}
+
+.courses-description.barcelona {
+	background-image: url('http://tjejerkodar.se/image/bla_pattern.png');
+}
+
+.courses-description.stockholm {
+	background-image: url('http://tjejerkodar.se/image/gron_pattern.png');
 }
