@@ -5,37 +5,90 @@ body {
 	text-align: center;
 }
 
+section {
+	padding-top: 50px;
+}
+
 header {
 	margin: 0px auto;
 	background-image: url("http://tjejerkodar.se/image/lila_pattern.png");
 	color: white;
-	}
+	padding-bottom: 50px;
+}
+
+button {
+	background-color: #5EFCDB;
+	padding: 15px;
+	border: 1px solid #5EFCDB;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+
+button:hover {
+	background-color: #45b9a1;
+	border: 1px solid #45b9a1;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	color: #32037A;
+}
+
+h3 {
+	color: #32037A;
+	font-weight: normal;
+}
 
 ul {
 	list-style: none;
 }
 
+label {
+	background-color: white;
+	padding: 10px;
+}
+
+p {
+	font-weight: lighter;
+	line-height: 1.7em;
+	font-size: 0.9em;
+}
+
 .navigation {
 	padding-top: 20px;
+	padding-bottom: 50px;
 	display: flex;
 	justify-content: space-between;
-	max-width: 700px;
+	align-items: flex-end;
+	max-width: 500px;
 	margin: 0px auto;
 	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.navigation img {
+	max-width: 80px;
 }
 
 .intro {
 	margin: auto;
 	display: block;
 	padding-bottom: 20px;
+	max-width: 700px;
 }
 
 .intro-fancy {
 	text-transform: uppercase;
 	font-style: italic;
+	font-size: 1.5em;
+	font-weight: lighter;
 }
 
 .courses {
+	padding-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -49,20 +102,25 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-position: center;
+	background-size: cover;
 }
 
 .courses-photo h2 {
 	background-color: white;
-	padding: 10px 7px 10px 7px;
+	padding: 10px 8px 10px 8px;
 }
 
 .courses-photo.berlin {
 	background-image: url('http://tjejerkodar.se/image/aktuell-berlin.png');
-	background-size: cover;
 }
 
 .courses-photo.barcelona {
 	background-image: url('http://tjejerkodar.se/image/aktuell-barcelona2.png');
+}
+
+.courses-photo:hover {
+	background-size: 105%;
 }
 
 .courses-description {
@@ -70,8 +128,14 @@ ul {
 	width: 340px;
 	margin: 10px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background-position: center;
+}
+
+.courses-description:hover {
+	background-size: 110%;
 }
 
 .courses-description.berlin {
@@ -84,4 +148,31 @@ ul {
 
 .courses-description.stockholm {
 	background-image: url('http://tjejerkodar.se/image/gron_pattern.png');
+}
+
+.companies {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.companies img {
+	max-width: 200px;
+}
+
+.mainPartner {
+	max-width: 500px;
+	padding: 40px;
+	margin: auto;
+}
+
+.partner {
+	max-width: 350px;
+	padding: 40px;
+	margin: auto;
+}
+
+.supporters {
+	display: none;
 }
