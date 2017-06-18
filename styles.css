@@ -49,9 +49,9 @@ header a:hover {
 
 button {
 	background-color: #5EFCDB;
-	padding: 15px;
+	padding: 20px;
 	border: 1px solid #5EFCDB;
-	border-radius: 20px;
+	border-radius: 30px;
 	text-transform: uppercase;
 }
 
@@ -92,13 +92,16 @@ p {
 	font-size: 0.9em;
 }
 
+nav {
+	display: flex;
+}
+
 .navigation {
 	padding-top: 20px;
 	padding-bottom: 50px;
 	display: flex;
-	justify-content: space-between;
 	align-items: flex-end;
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0px auto;
 	text-transform: uppercase;
 	font-weight: lighter;
@@ -108,10 +111,15 @@ p {
 	max-width: 80px;
 }
 
+.navigation li:not(:last-child) {
+	margin-right: 25px;
+}
+
+
 .burger {
 	display: block;
 	position: absolute;
-	right: 20px;
+	right: 10px;
 	margin: 20px;
 }
 
@@ -123,6 +131,7 @@ p {
 }
 
 .intro-fancy {
+	margin-top: 40px;
 	text-transform: uppercase;
 	font-style: italic;
 	font-size: 1.5em;
@@ -184,6 +193,11 @@ p {
 	text-decoration: underline;
 }
 
+.courses-description label {
+	color: #222;
+	font-size: 0.9em;
+}
+
 .courses-description.berlin {
 	background-image: url('http://tjejerkodar.se/image/ljuslila_pattern.png');
 }
@@ -220,9 +234,64 @@ p {
 }
 
 .supporters {
-	display: none;
 }
 
 .is-hidden {
 	display: none;
+}
+
+@media screen and (min-width: 800px) {
+	.supporter-companies {
+		display: grid;
+		grid-template-columns: 60px auto auto auto 60px;
+		grid-template-rows: 50px 50px 50px 50px 50px;
+		grid-column-gap: 2em;
+		/*justify-items: center;*/
+	}
+
+	#one {
+		grid-row-start: 1;
+		grid-row-end: span 1;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		max-width: 100%;
+	}
+
+	#two {
+		grid-row-start: 1;
+		grid-row-end: span 1;
+		grid-column-start: 3;
+		grid-column-end: 4;
+		max-width: 100%;
+	}
+
+	#three {
+		grid-row-start: 1;
+		grid-row-end: span 1;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.supporter-companies {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#one {
+		margin: auto;
+		max-width: 100%;
+	}
+
+	#two {
+		margin: auto;
+		max-width: 400px;
+	}
+
+	#three {
+		margin: auto;
+		max-width: 400px;
+	}
 }
