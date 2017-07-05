@@ -3,7 +3,6 @@ var north=0;
 var south=0;
 var west=0;
 var east=0;
-var position = "Central Room";
 var worldsize=3;
 
 var northbutton = document.getElementById("northbutton");
@@ -20,7 +19,7 @@ northbutton.addEventListener('click', function(event) {
   } else {
     south = south - 1;
   }
-  console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
+  myPosition();
 });
 
 westbutton.addEventListener('click', function(event) {
@@ -32,7 +31,7 @@ westbutton.addEventListener('click', function(event) {
   } else {
     east = east - 1;
   }
-  console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
+  myPosition();
 });
 
 eastbutton.addEventListener('click', function(event) {
@@ -44,7 +43,7 @@ eastbutton.addEventListener('click', function(event) {
   } else {
     west = west - 1;
   }
-  console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
+  myPosition();
 });
 
 southbutton.addEventListener('click', function(event) {
@@ -56,7 +55,13 @@ southbutton.addEventListener('click', function(event) {
   } else{
   south = south + 1;
   }
-  console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
+  myPosition();
 });
+
+function myPosition() {
+  var position = [north, south, east, west];
+  // console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
+  console.log(position);
+};
 
 })();
