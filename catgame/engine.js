@@ -77,6 +77,12 @@ function myPosition() {
   if (score > 3) {
     myImage.classList.remove("img--fifty");
   }
+
+  if (position[0] == 1) {
+    myImage.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
+  } else {
+    myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+  }
 };
 
 })();

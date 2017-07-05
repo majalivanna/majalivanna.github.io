@@ -2,8 +2,8 @@ body {
 }
 
 img {
-  max-width: 500px;
-  height: auto;
+  max-height: 300px;
+  width: auto;
 }
 
 .img--fifty {
