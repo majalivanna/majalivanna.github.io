@@ -1,5 +1,12 @@
 body {
-  background-image: url('https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
-  background-size: 100%;
-  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 500px;
+  height: auto;
+}
+
+.img--fifty {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
