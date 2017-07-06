@@ -15,7 +15,8 @@ var myImage = document.getElementById("myImage");
 var myScore = document.getElementById("myScore");
 
 northbutton.addEventListener('click', function(event) {
-  if (north > worldsize) {
+  if (north >= worldsize) {
+    myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
     return;
   }
   if (south < 1) {
@@ -29,7 +30,8 @@ northbutton.addEventListener('click', function(event) {
 });
 
 westbutton.addEventListener('click', function(event) {
-  if (west > worldsize) {
+  if (west >= worldsize) {
+    myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
     return;
   }
   if (east < 1) {
@@ -43,7 +45,8 @@ westbutton.addEventListener('click', function(event) {
 });
 
 eastbutton.addEventListener('click', function(event) {
-  if (east > worldsize) {
+  if (east >= worldsize) {
+    myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
     return;
   }
   if (west < 1) {
@@ -57,7 +60,8 @@ eastbutton.addEventListener('click', function(event) {
 });
 
 southbutton.addEventListener('click', function(event) {
-  if (south > worldsize) {
+  if (south >= worldsize) {
+    myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
   return;
   }
   if (north > 0) {
