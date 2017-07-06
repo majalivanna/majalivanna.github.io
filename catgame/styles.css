@@ -12,8 +12,6 @@ body {
 
 .inner-wrapper {
   position: relative;
-  text-align: center;
-  display: flex;
 }
 
 .controllers {
@@ -21,8 +19,28 @@ body {
   bottom: 20px;
   left: 350px;
   background-color: #999;
-  margin: auto;
   padding: 10px 10px 0px 10px;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+button {
+  font-size: 1em;
+  width: 30px;
+  height: 25px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 .catch {
@@ -36,6 +54,11 @@ body {
 .catch img {
   height: 60px;
   width: auto;
+}
+
+.catch img:hover {
+  height: 110%;
+  cursor: pointer;
 }
 
 .is-hidden {

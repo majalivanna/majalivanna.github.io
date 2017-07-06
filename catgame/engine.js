@@ -20,14 +20,17 @@ var mouse = document.getElementById("mouse");
 northbutton.addEventListener('click', function(event) {
   if (north >= worldsize) {
     myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+    northbutton.disabled = true;
     return;
   }
   if (south < 1) {
     north = north + 1;
     exploreScore = exploreScore + 1;
+    southbutton.disabled = false;
   } else {
     south = south - 1;
     exploreScore = exploreScore + 1;
+    southbutton.disabled = false;
   }
   myPosition();
 });
@@ -35,14 +38,17 @@ northbutton.addEventListener('click', function(event) {
 westbutton.addEventListener('click', function(event) {
   if (west >= worldsize) {
     myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+    westbutton.disabled = true;
     return;
   }
   if (east < 1) {
     west = west + 1;
     exploreScore = exploreScore + 1;
+    eastbutton.disabled = false;
   } else {
     east = east - 1;
     exploreScore = exploreScore + 1;
+    eastbutton.disabled = false;
   }
   myPosition();
 });
@@ -50,14 +56,17 @@ westbutton.addEventListener('click', function(event) {
 eastbutton.addEventListener('click', function(event) {
   if (east >= worldsize) {
     myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+    eastbutton.disabled = true;
     return;
   }
   if (west < 1) {
     east = east + 1;
     exploreScore = exploreScore + 1;
+    westbutton.disabled = false;
   } else {
     west = west - 1;
     exploreScore = exploreScore + 1;
+    westbutton.disabled = false;
   }
   myPosition();
 });
@@ -65,14 +74,17 @@ eastbutton.addEventListener('click', function(event) {
 southbutton.addEventListener('click', function(event) {
   if (south >= worldsize) {
     myImage.src = "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+    southbutton.disabled = true;
   return;
   }
   if (north > 0) {
     north = north - 1;
     exploreScore = exploreScore + 1;
+    northbutton.disabled = false;
   } else {
-  south = south + 1;
-  exploreScore = exploreScore + 1;
+    south = south + 1;
+    exploreScore = exploreScore + 1;
+    northbutton.disabled = false;
   }
   myPosition();
 });
@@ -86,9 +98,7 @@ mouse.addEventListener('click', function(event) {
 
 function myPosition() {
   var position = [north, west, east, south];
-  // console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
   console.log(position);
-  console.log(exploreScore);
   imageSaturation();
   setScore();
   myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
