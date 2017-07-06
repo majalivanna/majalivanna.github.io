@@ -13,6 +13,7 @@ var southbutton = document.getElementById("southbutton");
 
 var myImage = document.getElementById("myImage");
 var myScore = document.getElementById("myScore");
+var mouse = document.getElementById("mouse");
 
 northbutton.addEventListener('click', function(event) {
   if (north >= worldsize) {
@@ -74,6 +75,13 @@ southbutton.addEventListener('click', function(event) {
   myPosition();
 });
 
+mouse.addEventListener('click', function(event) {
+  score = score + 10;
+  setScore();
+  mouse.classList.add("is-hidden");
+
+});
+
 function myPosition() {
   var position = [north, south, east, west];
   // console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
@@ -81,11 +89,13 @@ function myPosition() {
   console.log(score);
   imageSaturation();
   setScore();
+  myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
 
   if (position[0] == 1) {
     myImage.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
-  } else {
-    myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+  } else if (position[2] == 2) {
+    mouse.classList.remove("is-hidden");
+
   }
 };
 

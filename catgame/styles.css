@@ -25,7 +25,24 @@ body {
   padding: 10px 10px 0px 10px;
 }
 
-img {
+.catch {
+  position: absolute;
+  bottom: 200px;
+  left: 600px;
+  height: 60px;
+  width: 60px;
+}
+
+.catch img {
+  height: 60px;
+  width: auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.background {
   max-height: 500px;
 }
 
