@@ -12,6 +12,7 @@ var eastbutton = document.getElementById("eastbutton");
 var southbutton = document.getElementById("southbutton");
 
 var myImage = document.getElementById("myImage");
+var myScore = document.getElementById("myScore");
 
 northbutton.addEventListener('click', function(event) {
   if (north > worldsize) {
@@ -75,6 +76,7 @@ function myPosition() {
   console.log(position);
   console.log(score);
   imageSaturation();
+  setScore();
 
   if (position[0] == 1) {
     myImage.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
@@ -101,6 +103,10 @@ function imageSaturation() {
   } else {
     return;
   }
+};
+
+function setScore() {
+  myScore.innerHTML = "Score: " + score;
 };
 
 })();
