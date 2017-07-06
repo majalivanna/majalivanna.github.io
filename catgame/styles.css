@@ -1,13 +1,40 @@
 body {
   font-family: sans-serif;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
 }
 
 img {
-  max-height: 300px;
-  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.img--fifty {
+.img--twenty {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%);
+}
+
+.img--forty {
+  -webkit-filter: grayscale(40%);
+  filter: grayscale(40%);
+}
+
+
+.img--sixty {
+  -webkit-filter: grayscale(60%);
+  filter: grayscale(60%);
+}
+
+
+.img--eighty {
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+}
+
+.img--hundred {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }

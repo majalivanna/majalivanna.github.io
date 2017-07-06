@@ -74,14 +74,32 @@ function myPosition() {
   // console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
   console.log(position);
   console.log(score);
-  if (score > 3) {
-    myImage.classList.remove("img--fifty");
-  }
+  imageSaturation();
 
   if (position[0] == 1) {
     myImage.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
   } else {
     myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
+  }
+};
+
+function imageSaturation() {
+  if (score >= 3 && score < 6) {
+    myImage.classList.remove("img--hundred");
+    myImage.classList.add("img--eighty");
+  } else if (score >= 6 && score < 9 ) {
+    myImage.classList.remove("img--eighty");
+    myImage.classList.add("img--sixty");
+  } else if (score >= 9 && score < 12 ) {
+    myImage.classList.remove("img--sixty");
+    myImage.classList.add("img--forty");
+  } else if (score >= 12 && score < 15 ) {
+    myImage.classList.remove("img--forty");
+    myImage.classList.add("img--twenty");
+  } else if (score >= 15) {
+    myImage.classList.remove("img--twenty");
+  } else {
+    return;
   }
 };
 
