@@ -4,7 +4,9 @@ var south=0;
 var west=0;
 var east=0;
 var worldsize=3;
-var score=0;
+var exploreScore=0;
+var catchScore=0;
+var totalScore=0;
 
 var northbutton = document.getElementById("northbutton");
 var westbutton = document.getElementById("westbutton");
@@ -22,10 +24,10 @@ northbutton.addEventListener('click', function(event) {
   }
   if (south < 1) {
     north = north + 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   } else {
     south = south - 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   }
   myPosition();
 });
@@ -37,10 +39,10 @@ westbutton.addEventListener('click', function(event) {
   }
   if (east < 1) {
     west = west + 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   } else {
     east = east - 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   }
   myPosition();
 });
@@ -52,10 +54,10 @@ eastbutton.addEventListener('click', function(event) {
   }
   if (west < 1) {
     east = east + 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   } else {
     west = west - 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   }
   myPosition();
 });
@@ -67,52 +69,53 @@ southbutton.addEventListener('click', function(event) {
   }
   if (north > 0) {
     north = north - 1;
-    score = score + 1;
+    exploreScore = exploreScore + 1;
   } else {
   south = south + 1;
-  score = score + 1;
+  exploreScore = exploreScore + 1;
   }
   myPosition();
 });
 
 mouse.addEventListener('click', function(event) {
-  score = score + 10;
+  catchScore = catchScore + 10;
   setScore();
   mouse.classList.add("is-hidden");
 
 });
 
 function myPosition() {
-  var position = [north, south, east, west];
+  var position = [north, west, east, south];
   // console.log("North: " + north +"   South: " + south+"   East: " + east + "   West: " + west);
   console.log(position);
-  console.log(score);
+  console.log(exploreScore);
   imageSaturation();
   setScore();
   myImage.src = "https://images.pexels.com/photos/96938/pexels-photo-96938.jpeg?w=940&h=650&auto=compress&cs=tinysrgb";
 
   if (position[0] == 1) {
     myImage.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
-  } else if (position[2] == 2) {
+  } else if (position[2] == 2 || position[3] == 1) {
     mouse.classList.remove("is-hidden");
-
+  } else {
+    return;
   }
 };
 
 function imageSaturation() {
-  if (score >= 3 && score < 6) {
+  if (exploreScore >= 3 && exploreScore < 6) {
     myImage.classList.remove("img--hundred");
     myImage.classList.add("img--eighty");
-  } else if (score >= 6 && score < 9 ) {
+  } else if (exploreScore >= 6 && exploreScore < 9 ) {
     myImage.classList.remove("img--eighty");
     myImage.classList.add("img--sixty");
-  } else if (score >= 9 && score < 12 ) {
+  } else if (exploreScore >= 9 && exploreScore < 12 ) {
     myImage.classList.remove("img--sixty");
     myImage.classList.add("img--forty");
-  } else if (score >= 12 && score < 15 ) {
+  } else if (exploreScore >= 12 && exploreScore < 15 ) {
     myImage.classList.remove("img--forty");
     myImage.classList.add("img--twenty");
-  } else if (score >= 15) {
+  } else if (exploreScore >= 15) {
     myImage.classList.remove("img--twenty");
   } else {
     return;
@@ -120,7 +123,8 @@ function imageSaturation() {
 };
 
 function setScore() {
-  myScore.innerHTML = "Score: " + score;
+  totalScore = catchScore + exploreScore;
+  myScore.innerHTML = "Score: " + totalScore;
 };
 
 })();
