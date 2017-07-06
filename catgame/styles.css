@@ -4,12 +4,29 @@ body {
 }
 
 .wrapper {
+  width: 80%;
+  margin: 0;
+  /*background-color: hotpink;*/
+
+}
+
+.inner-wrapper {
+  position: relative;
+  text-align: center;
   display: flex;
 }
 
+.controllers {
+  position: absolute;
+  bottom: 20px;
+  left: 34%;
+  background-color: #999;
+  margin: auto;
+  padding: 10px;
+}
+
 img {
-  max-width: 100%;
-  height: auto;
+  max-height: 500px;
 }
 
 .img--twenty {
